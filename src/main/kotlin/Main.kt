@@ -1,4 +1,5 @@
 import kotlin.math.sqrt
+import kotlin.math.PI
 
 class Triangle(
     private val base: Double,
@@ -17,6 +18,17 @@ class Triangle(
     }
 }
 
+class Circle(private val jariJari: Double) {
+    fun wideCircle(): Double {
+        return PI * jariJari * jariJari
+    }
+
+    fun aroundCircle(): Double {
+        return 2 * PI * jariJari
+    }
+}
+
+
 fun main() {
     val triangle = Triangle(6.0, 8.0, 5.0, 7.0, 9.0)
     val wide = triangle.wideTriangle()
@@ -24,4 +36,11 @@ fun main() {
 
     println("Luas Segitiga: $wide")
     println("Keliling Segitiga: $around")
+
+    val circle = Circle(5.0)
+    val circleWide = circle.wideCircle()
+    val circleAround = circle.aroundCircle()
+
+    println("Luas Lingkaran: $circleWide")
+    println("Keliling Lingkaran: $circleAround")
 }
