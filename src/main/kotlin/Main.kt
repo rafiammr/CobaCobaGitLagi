@@ -28,6 +28,16 @@ class Circle(private val jariJari: Double) {
     }
 }
 
+class Circle2Square(private val jariJari: Double) {
+    fun wideCircle(): Double {
+        return PI * jariJari * jariJari
+    }
+
+    fun aroundCircle(): Double {
+        return 2 * PI * jariJari
+    }
+}
+
 
 fun main() {
     val triangle = Triangle(6.0, 8.0, 5.0, 7.0, 9.0)
